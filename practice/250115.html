@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<h1 id="test" style="color: blue;">hello</h1>
+<script>
+  let h1Hello = {
+
+    element: {
+      tagName:"h1",
+    },
+    attribute: {
+      id: "test",
+      style: {
+        color : "blue",
+
+      },
+    },
+    contentNode: {
+      textNode: "hello"
+
+    },
+  }
+
+
+  let element1 = "sada"
+
+  let realH1 = "<" + h1Hello.element.tagName + ">";
+  console.log(realH1)
+  let clodeH1 = "</" + h1Hello.element.tagName + ">"
+
+  let idH1 = "<" + h1Hello.element.tagName + " id=" + '"' + h1Hello.attribute.id + '"' + ">" + element1 + clodeH1
+
+  console.log(idH1)
+
+
+  window.document.body.innerHTML  = idH1
+
+
+
+</script>
+</body>
+</html>
+
+
+<!-- //node: "마디", 손가락 마디 등등 -> 부분 
+element node: 요소 마디
+attribute node: 속성마디
+content node: 알멩이 -->

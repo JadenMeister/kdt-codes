@@ -1,0 +1,85 @@
+<div id="root"></div>
+
+<script>
+ const lectureInfo = {
+    classroom: "305",
+    instructor: {
+      characteristic: "handsome",
+      name: "Kong Ukjae"
+    },
+    students: [
+      "김민지",
+      "김요훈",
+      "김윤지",
+      "김재승",
+      "손정민",
+      "안은별",
+      "윤종환",
+      "최정민",
+      "최현준",
+      "전선일"
+    ],
+    todayLecture: {
+      stack: ["HTML", "CSS", "JavaScript"],
+      description: "자바스크립트로 직접 HTML 만들어보기"
+    }
+  }
+  let kdtClass = document.getElementById("root");
+  
+  kdtClass.innerHTML = `
+    <div>
+      KDT 강의실은 ${lectureInfo.classroom}호 이다
+    </div>
+    <div>
+      강사님의 이름은 ${lectureInfo.instructor.name} 이고
+    </div>
+    <div>
+      강사님의 특징은 ${lectureInfo.instructor.characteristic} 이다
+    </div>
+    <div>
+      우리는 지금 ${lectureInfo.todayLecture.stack[2]}로
+    </div>
+    <div>
+      ${lectureInfo.todayLecture.description}를 하고 있다.
+    </div>
+    <div>
+      다 한 사람 체크
+    </div>
+
+  `;
+  
+  for (let key in lectureInfo.students) {
+    let classStd = lectureInfo.students[key]
+    kdtClass.innerHTML += `
+    <div style="display:flex;">
+      <p> ${classStd}</p>
+      <input type="checkbox" name="" id="">
+    </div>
+    `
+  }
+</script>
+
+객체는 key와 value가 들어간다. lectureInfo 객체에서 key 는 classroom이 될 것 이고, value는 305가 된다. value는 305 처럼 값이 될 수 있고 lectureInfo.instructor처럼 객체 형식으로 한번 더 들어갈 수 있다. (객체 안에 객체 안에 객체 안에 객체 형식)
+
+객체 응용법
+   const contentObj = {
+     age: document.getElementById("myAge"), // 나이
+     gender: document.getElementById("myGender"), // 성별
+     propensity: document.getElementById("myPropensity"), // 성향
+     favorite: document.getElementById("myFavorite"), // 좋아하는것
+     hobby: document.getElementById("myHobby"), // 취미
+     expression: document.getElementById("myExpression"), // 표현 할 단어
+     myBtn: document.getElementById("myBtnContainer"), // 저장 버튼
+  };
+   여기서도 age 는 key , document.getElementById("myAge")는 value 가 될 것 이다.
+   contentObj.age  이런식으로 myAge이란 ID를 가진 요소를 쉽게 가져올 수 있다.
+   
+   - 번외로 let age = document.getElementById("myAge") 로 사용 되기도 함
+  
+
+- document.getElementById("root")란 document안에 root란 ID를 가진 요소를 찾으라고 명령 하는 것
+
+
+* 이해 안가는 부분 질문 주세요 !!
+
+* 혹시 틀린거 있으면 수정해주세요 !!

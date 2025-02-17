@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 350px;
+  height: 60px;
+}
+
+.main .firstBtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 170px;
+  height: 60px;
+  background-color: #ff5722;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.main .secondBtn {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  width: 170px;
+  height: 60px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.screen1,
+.screen2 {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2px solid #000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 2;
+}
+
+.screen1 {
+  background-color: rgba(240, 230, 140, 0.9);
+}
+
+.screen2 {
+  background-color: rgba(173, 216, 230, 0.9);
+}
+
+/* 레이아웃 1: 데스크탑 */
+@media (min-width: 1024px) {
+  .main {
+    top: 30px;
+    left: 30px;
+    width: 400px;
+    height: 70px;
+  }
+
+  .main .firstBtn,
+  .main .secondBtn {
+    width: 195px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+  }
+
+  .screen1,
+  .screen2 {
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+  }
+}
+
+/* 레이아웃 2: 태블릿 */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    top: 15px;
+    left: 15px;
+    width: 320px;
+    height: 50px;
+  }
+
+  .main .firstBtn,
+  .main .secondBtn {
+    width: 155px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
+
+  .screen1,
+  .screen2 {
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+  }
+}
+
+/* 레이아웃 3: 모바일 */
+@media (max-width: 767px) {
+  .main {
+    top: 10px;
+    left: 10px;
+    width: 280px;
+    height: 40px;
+  }
+
+  .main .firstBtn,
+  .main .secondBtn {
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 10px;
+  }
+
+  .screen1,
+  .screen2 {
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    height: 40%;
+  }
+}

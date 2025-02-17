@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <div id="text">내용</div>
+  <div id="text2">하이</div>
+
+  <button id="btn">변경</button>
+
+  <script>
+    
+          const textChange = document.getElementById("text")
+          const textChange2 = document.getElementById("text2")
+          const changeBtn = document.getElementById("btn")
+
+
+            // 수정된 코드 
+
+          isClicked = true;
+
+          changeBtn.addEventListener('click', ()=>{
+            textChange.textContent = isClicked ? "내용" : "짜잔"
+            textChange2.textContent = isClicked ? "하이" : "바뀜 ㅋㅋ 하이"
+            textChange.style.color = isClicked ? "black" : "red"
+
+            isClicked = !isClicked
+
+          })
+
+          
+
+
+              // 기존 코드 
+
+          // let clickFlag = true;   
+
+          //   changeBtn.addEventListener('click', () => {
+          //     if(clickFlag) {
+          //       textChange.textContent = "짜잔";
+          //       textChange2.textContent = "바뀜 ㅋㅋ ㅎㅇ";
+          //       textChange.setAttribute('style', 'color: red;')
+          //     } else{
+          //       textChange.textContent = "내용";
+          //       textChange2.textContent = "ㅎㅇ";
+          //       textChange.setAttribute('style', 'color: black;')
+          //     }
+          //       clickFlag = !clickFlag
+              
+              
+          //   });
+
+     
+
+
+            
+
+
+  </script>
+
+  
+</body>
+</html>

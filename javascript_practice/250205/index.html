@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      } /*이중선 제거*/
+      th,
+      td {
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid #000;
+
+        vertical-align: top;
+        vertical-align: bottom;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="menu">
+        <table>
+          <tr class="tableHeader">
+            <th>번호</th>
+            <th>빵 이름</th>
+            <th>가격</th>
+            <th>+</th>
+          </tr>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div id="bag">
+        장바구니
+        <table>
+          <tr class="tableMarket">
+            <th>번호</th>
+            <th>빵 이름</th>
+            <th>수량</th>
+            <th>가격</th>
+            <th>-</th>
+          </tr>
+          <tbody id="tableBag"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="shopping.js"></script>
+  </body>
+</html>

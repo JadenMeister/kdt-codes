@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  
+</head>
+<body>
+  <div id="root">
+    <script>
+    
+
+  
+      var itsMe = {
+        name: "최정민",
+        like: ["카메라","위스키"],
+        hate:["오이","고수"],
+        hobby:"사진찍기",
+        homeAdress:"대전",
+        관심사:["자동차","전자기기",],
+        좋아하는숫자:1,
+      }
+      console.log(itsMe["hate"][0])
+  
+      var root = window.document.body.children[0];
+      console.log(root);
+      
+      
+      var order = 0;
+  
+      root.addEventListener('click', ()=> {
+        order = order + 1;
+        root.innerHTML = itsMe.hate[order];
+      });
+  
+  
+      root.innerHTML = itsMe.hate[order]
+      
+  
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const lectureInfo = {
+        classroom: "305",
+        instructor: {
+          characteristic: "handsome",
+          name: "Kong Ukjae"
+        },
+        students: [
+          "김민지",
+          "김요훈", 
+          "김윤지",
+          "김재승",
+          "손정민",
+          "안은별",
+          "윤종환",
+          "최정민",
+          "최현준",
+          "전선일"
+        ],
+        moreInfo:{
+          likes:["파인애플", "컴퓨터", "코딩", "수학", "독서", "수면", "게임", "미디어 시청", "운동", "고양이"],
+          hates:["사람", "동물", "커피", "여행", "운전", "러닝", "벌레", "수영", "폭력","오이"],
+        },
+        todayLecture: {
+          stack: ["HTML", "CSS", "JavaScript"],
+          description: "자바스크립트로 직접 HTML 만들어보기"
+        },
+
+        }
+
+        console.log(lectureInfo)
+
+      
+        class StudentEstablished {
+          constructor ( students, likes, hates ){
+
+            
+            this.students = lectureInfo.students
+            this.likes = lectureInfo.moreInfo.likes
+            this.hates = lectureInfo.moreInfo.hates
+
+            // console.log(this.students)
+          }
+
+        }
+
+          let established = new StudentEstablished()
+
+          const randomStudents = established.students[Math.floor(Math.random() * established.students.length)]
+          const randomLikes = established.likes[Math.floor(Math.random() * established.likes.length)]
+          const randomHates = established.hates[Math.floor(Math.random() * established.hates.length)]
+          
+          console.log(randomStudents, randomLikes, randomHates)
+          
+
+      
+
+        
+
+
+
+      
+
+      
+  </script>
+</body>
+</html>

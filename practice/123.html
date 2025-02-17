@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div id="json">
+    <script>
+      var itsMe = {
+        name: "최정민",
+        like: ["카메라","위스키"],
+        hate:["오이","고수"],
+        hobby:"사진찍기",
+        homeAdress:"대전",
+        관심사:["자동차","전자기기",],
+        좋아하는숫자:1,
+      }
+
+      console.log(Object.keys(itsMe))
+      console.log(Object.values(itsMe))
+
+      
+
+      Object.keys(itsMe).forEach((key) => {
+        const values = Array.isArray(itsMe[key])
+
+         ?itsMe[key].join(",")
+         :itsMe[key];
+
+        console.log(values)
+        console.log(key)
+
+        //변수 선언
+        const itsMeJson = document.getElementById("json")
+
+        const p = document.createElement('p');
+        const span = document.createElement('span')
+
+          //생성 시 클래스 부여
+        p.setAttribute("class","key")
+        span.setAttribute("class","value")
+
+        p.innerHTML= "key값:"+ " " + key;
+        span.innerHTML = "value값:" + " " + values;
+
+
+        document.querySelector("#json").append(p)
+        document.querySelector("#json").append(span)
+         
+      
+
+      });
+
+  
+
+
+
+    </script>
+  </div>
+  
+</body>
+</html>
+
+
+
+<!-- for문으로  -->
+
+<!-- 
+for (let i = 0; i < itsMe.values.length ; i++) {
+  str = str + i;
+}
+  -->
